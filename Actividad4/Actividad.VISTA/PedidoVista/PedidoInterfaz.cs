@@ -92,7 +92,7 @@ namespace Actividad.VISTA.PedidoVista
         {
             int IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             PedidoBSS bss = new PedidoBSS();
-            dataGridView1.DataSource=bss.HistorialPedidoBss(IdPersonaSeleccionada);
+            dataGridView1.DataSource = bss.HistorialPedidoBss(IdPersonaSeleccionada);
         }
     }
 }

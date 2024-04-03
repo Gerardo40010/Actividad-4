@@ -81,6 +81,17 @@ namespace Actividad.VISTA.ClienteVista
             int IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             ClienteDatos fr = new ClienteDatos(IdPersonaSeleccionada);
             bss.ClienteDatosBSS(IdPersonaSeleccionada);
+            dataGridView2.DataSource = bss.ClienteDatosBSS(IdPersonaSeleccionada);
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void dataGridView2_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

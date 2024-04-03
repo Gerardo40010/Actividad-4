@@ -58,9 +58,10 @@ namespace Actividad.DAL
         }
         public DataTable HistorialPedidoDal(int id)
         {
-            string consulta = "select IDPEDIDO,C.NOMBRE,FECHA ,Total,Estado\r\nfrom PEDIDO p\r\nInner join CLIENTE C On C.IDCLIENTE=p.IDCLIENTE\r\nWhere P.IdCliente= "+ id;
+            string consulta = "select C.NOMBRE,count(IDPEDIDO) AS Cantidadpedidos,\r\nsum (TOTAL) as totalPedidos\r\nfrom PEDIDO P\r\nInner join CLIENTE C On C.IDCLIENTE=p.IDCLIENTE\r\nWhere P.IdCliente= "+id +"group by C.NOMBRE;";
             DataTable Lista = conexion.EjecutarDataTabla(consulta, "tabla");
             return Lista;
+            /*string consulta = "select IDPEDIDO,C.NOMBRE,FECHA ,Total,Estado\r\nfrom PEDIDO p\r\nInner join CLIENTE C On C.IDCLIENTE=p.IDCLIENTE\r\nWhere P.IdCliente= "+ id;*/
         }
     }
 }

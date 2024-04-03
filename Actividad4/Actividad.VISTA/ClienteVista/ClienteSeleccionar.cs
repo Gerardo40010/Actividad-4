@@ -32,8 +32,8 @@ namespace Actividad.VISTA.ClienteVista
         private void button5_Click(object sender, EventArgs e)
         {
             int IdPersonaSeleccionada = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            ClienteDatos fr = new ClienteDatos(IdPersonaSeleccionada);
-            bss.ClienteDatosBSS(IdPersonaSeleccionada);
+            PedidoBSS bss = new PedidoBSS();
+            dataGridView1.DataSource = bss.HistorialPedidoBss(IdPersonaSeleccionada);
         }
     }
 }

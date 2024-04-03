@@ -43,7 +43,9 @@
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
+            dataGridView2 = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
@@ -52,7 +54,7 @@
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.BackgroundColor = Color.FromArgb(192, 255, 255);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(436, 12);
+            dataGridView1.Location = new Point(438, 29);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -180,12 +182,29 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
+            // dataGridView2
+            // 
+            dataGridView2.AllowUserToAddRows = false;
+            dataGridView2.AllowUserToDeleteRows = false;
+            dataGridView2.BackgroundColor = Color.FromArgb(192, 255, 255);
+            dataGridView2.BorderStyle = BorderStyle.None;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(644, 431);
+            dataGridView2.Margin = new Padding(1);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.ReadOnly = true;
+            dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView2.Size = new Size(256, 76);
+            dataGridView2.TabIndex = 15;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick_1;
+            // 
             // ClienteInterfaz
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(982, 537);
+            Controls.Add(dataGridView2);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -205,6 +224,7 @@
             Text = "ClienteInterfaz";
             Load += ClienteInterfaz_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -226,5 +246,6 @@
         private Button button2;
         private Button button3;
         private Button button4;
+        private DataGridView dataGridView2;
     }
 }
